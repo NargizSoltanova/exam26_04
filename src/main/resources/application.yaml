@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: exam26_04
+
+  datasource:
+    url: jdbc:postgresql://localhost:5434/courseDb
+    username: postgres
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: validate

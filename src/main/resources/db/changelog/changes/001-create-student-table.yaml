@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-student-table
+      author: nargiz
+      changes:
+        - createTable:
+            tableName: students
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+
+              - column:
+                  name: first_name
+                  type: nvarchar(100)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: last_name
+                  type: nvarchar(100)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: age
+                  type: int
