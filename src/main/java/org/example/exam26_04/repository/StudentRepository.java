@@ -14,6 +14,7 @@ import java.util.List;
 public interface StudentRepository extends JpaRepository<StudentEntity, Integer>,
         JpaSpecificationExecutor<StudentEntity>
 {
+    @EntityGraph(attributePaths = "courses")
     List<StudentEntity> findByFirstName(@Param("name") String name);
     @EntityGraph(attributePaths = "courses")
     List<StudentEntity> findAll();
